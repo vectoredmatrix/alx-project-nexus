@@ -48,19 +48,24 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
 ] +my_app
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-       "corsheaders.middleware.CorsMiddleware",
-    "django.middleware.common.CommonMiddleware",
-    'whitenoise.middleware.WhiteNoiseMiddleware', 
-    'django.contrib.sessions.middleware.SessionMiddleware',
+
+    # CORS should go as high as possible, right after SecurityMiddleware
+    'corsheaders.middleware.CorsMiddleware',
+
+    # WhiteNoise MUST be right after CORS (which is allowed)
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
+    # Django middleware
     'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 ROOT_URLCONF = 'e_commance.urls'
 
