@@ -1,0 +1,77 @@
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+media/
+staticfiles/
+static/
+
+# Django migrations (optional — remove if you want migrations tracked)
+# */migrations/
+# !*/migrations/__init__.py
+
+# Python
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.virtualenv/
+
+# Environment variables
+.env
+.env.*
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Pytest / coverage
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.cache/
+
+# MyPy / type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pipenv / Poetry
+pipenv/
+Pipfile.lock
+poetry.lock
+
+# Local settings
+local_settings.py
+settings_local.py
+
+populate.py
